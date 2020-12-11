@@ -1,37 +1,30 @@
 const Discord = require('discord.js')
 module.exports = {
     name: 'opleiding', // The name of the command
-    description: 'vestuurt een bericht over een gestrte opleiding', // The description of the command (for help text)
+    description: 'vestuurt een bericht over een gestarte opleiding', // The description of the command (for help text)
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message, args) {
-      var member = message.mentions.members.first();
-      let user = message.mentions.users.first();
-      if (!message.member.roles.find(x => x.name === "eigenaar1"))
-      if (!message.member.roles.find(x => x.name === "bestuur")) {
-        return message.channel.send("Je hebt geen permissies voor dit commando!");
-      }
-  
+     f (message.content.startsWith(';opleidinggestart')) {
+          let rest_of_the_string = message.content.slice(';opleidinggestart'.length); //removes the first part
+          let array_of_arguments = rest_of_the_string.split('*'); //[title, description, link, image]
 
-      let reden = args.slice(1).join(" ");
-      if(!reden) {
-        reden = "Er is geen reden opgegeven.";
+   
       }
-        const kickEmbed = new Discord.RichEmbed()
+        const Embed = new Discord.RichEmbed()
+        
+        .setTitle("Opleiding gestart")
+        .setDescription("Er is zojuist een opleiding gestart!")
+        .setURL("https://meldkmerspel.com")
         .setColor(0xD1132F)
-        .setTitle("Nieuwe mod-log!")
-        .addField("Actie:", "Kick")
-        .addField("Gekickete gebruiker:",`<@${user.id}>`)
-        .addField ("Gekicket door:",`${message.author}`)
-        .addField("Reden:",`${reden}`)
-        .setThumbnail(user.displayAvatarURL)
         .setTimestamp()
         .setFooter("MeldkamerBot","https://i.ibb.co/VNk1Qn8/logo-IMG-20200921-WA0000.jpg")
+        .setThumbnail(user.displayAvatarURL)
+        .addField('Opleiding:', array_of_arguments[0])
+        
+        
 
-        let modlogKanaal = message.guild.channels.get('786947624811888640')
-                  if(modlogKanaal) {
-                      member.kick(reden)
-                      modlogKanaal.send(kickEmbed);
+     
                       message.delete(1000)
                     }
   }}
