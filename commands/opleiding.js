@@ -6,10 +6,7 @@ module.exports = {
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message) {
       const embed = new Discord.RichEmbed()
- if (message.content.startsWith(';opleidinggestart')) {
-          let rest_of_the_string = message.content.slice(';opleidinggestart'.length); //removes the first part
-          let array_of_arguments = rest_of_the_string.split('*'); //[title, description, link, image]
-.addField('Opleiding:', array_of_arguments[0])
+ 
           .setTitle("Er is een opleiding!")
           .setDescription("Er is een grote team inzet gestart! Iedereen graag de benodigde voertuigen naar deze melding sturen.")
           .setURL("https://meldkamerspel.com")
