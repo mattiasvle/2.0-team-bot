@@ -5,6 +5,10 @@ module.exports = {
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message) {
+ if (message.content.startsWith(';opleiding')) {
+          let rest_of_the_string = message.content.slice(';opleiding'.length); //removes the first part
+          let array_of_arguments = rest_of_the_string.split('*'); //[title, description, link, image]
+.addField('Opleiding:', array_of_arguments[0])
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een opleiding gestart!")
           .setDescription("Er is een opleiding gestart!")
