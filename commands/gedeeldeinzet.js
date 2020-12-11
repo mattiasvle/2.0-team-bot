@@ -5,7 +5,7 @@ module.exports = {
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message, args) {
-      let reden = args.slice(1).join(" ");
+      let reden = args.slice(0).join(" ");
       if(!reden) {
         reden = "Er is geen reden opgegeven.";
       }
