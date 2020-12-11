@@ -18,7 +18,7 @@ module.exports = {
         .setColor(0xD1132F)
         .setTimestamp()
         .setFooter("MeldkamerBot","https://i.ibb.co/VNk1Qn8/logo-IMG-20200921-WA0000.jpg")
-        .setThumbnail(user.displayAvatarURL)
+        .setThumbnail()
         .addField('Opleiding:', array_of_arguments[0])
         
         
