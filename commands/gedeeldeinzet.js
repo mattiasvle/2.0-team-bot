@@ -6,7 +6,7 @@ module.exports = {
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message) {
       const embed = new Discord.RichEmbed()
-          .setTitle("Er is een grote inzet gestart!")
+          .setTitle("Er is een inzet gedeeld voor hulp!")
           .setDescription("HELP")
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
