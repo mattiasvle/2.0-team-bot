@@ -33,7 +33,7 @@ module.exports = {
             const embed = new Discord.RichEmbed()
                 .setTitle("Berichten verwijderd!")
                 .setColor(0xD1132F)
-                .setFooter("MeldkamerBot", "MELDKAMER LOGO HIER")
+                .setFooter("MeldkamerBot", "https://i.ibb.co/VNk1Qn8/logo-IMG-20200921-WA0000.jpg")
                 .setTimestamp()
                 .addField("Verwijderd door:", `${message.author}`)
                 .addField("Tijdstip:", datetime)
@@ -43,7 +43,7 @@ module.exports = {
                 .addField("Totaal aantal berichten verwijderd:", deletedMessages.size, false)
                 .setThumbnail(message.author.displayAvatarURL)
 
-                let updateChannel = message.guild.channels.get('KANAAL VOOR PURGE LOGS HIER, KAN OOK MODLOG KANAAL ZIJN')
+                let updateChannel = message.guild.channels.get('786947669989392394')
                       if(updateChannel) {
                       updateChannel.send(embed)
                       console.log("Berichten verwijderen. Tijdstip: " + datetime)
