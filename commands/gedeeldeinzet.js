@@ -5,6 +5,11 @@ module.exports = {
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message) {
+
+      let reden = args.slice(1).join(" ");
+      if(!reden) {
+        reden = "Er is geen reden opgegeven.";
+      }
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een inzet gedeeld voor hulp!")
           .setDescription("HELP")
