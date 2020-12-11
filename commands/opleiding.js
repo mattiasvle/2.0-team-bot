@@ -1,24 +1,41 @@
 const Discord = require('discord.js')
 module.exports = {
     name: 'opleiding', // The name of the command
-    description: 'Verstuurd een bericht over de gestarte opleiding!', // The description of the command (for help text)
+    description: 'Verstuurt een bericht over een gestarte opleiding', // The description of the command (for help text)
+    category: 'Admin',
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
-    execute(message) {
- if (message.content.startsWith(';opleiding')) {
-          let rest_of_the_string = message.content.slice(';opleiding'.length); //removes the first part
-          let array_of_arguments = rest_of_the_string.split('*'); //[title, description, link, image]
+    execute(message, args) {
+      var member = message.mentions.members.first();
+      if (!message.member.roles.find(x => x.name === "eigenaar1"))
+      if (!message.member.roles.find(x => x.name === "bestuur")) {
+        return message.channel.send("Je hebt geen permissies voor dit commando!");
+      }
+      if(!member)
+        return message.reply("je moet een opleiding opgeven!");
+   
+      }
 
-      const embed = new Discord.RichEmbed()
-          .setTitle("Er is een opleiding gestart!")
-          .setDescription("Er is een opleiding gestart!")
-          .setURL("https://meldkamerspel.com")
-          .setColor(0xD1132F)
-          .setTimestamp()
-          .setFooter("MeldkamerBot","https://i.ibb.co/VNk1Qn8/logo-IMG-20200921-WA0000.jpg")
+      let reden = args.slice(1).join(" ");
+      if(!reden) {
+        reden = "Er is geen reden opgegeven.";
+      }
 
-      message.channel.send(embed);
-      message.channel.send("@everyone");
-      message.delete(1000)
-    }
-};
+       
+        .setTitle("Nieuwe mod-log!")
+        .setColor(0xD1132F)
+        .addField("Opleiding:", "Verbanning")
+        .addField("Verbannen gebruiker:",`<@${user.id}>`)
+        .addField ("Verbannen door:",`${message.author}`)
+        .addField("Reden:",`${reden}`)
+        .setThumbnail(user.displayAvatarURL)
+        .setTimestamp()
+       
+
+      let modlogKanaal = message.guild.channels.get('786947624811888640')
+                if(modlogKanaal) {
+                  modlogKanaal.send(banEmbed)
+                  member.ban(reden)
+                  message.delete(1000)
+                }
+  }}
