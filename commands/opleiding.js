@@ -9,9 +9,6 @@ module.exports = {
           let rest_of_the_string = message.content.slice(';opleiding'.length); //removes the first part
           let array_of_arguments = rest_of_the_string.split('*'); //[title, description, link, image]
 
-   
-   
-        
         .setTitle("Opleiding gestart")
         .setDescription("Er is zojuist een opleiding gestart!")
         .setURL("https://meldkamerspel.com")
