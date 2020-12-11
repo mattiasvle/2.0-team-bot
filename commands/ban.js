@@ -8,8 +8,8 @@ module.exports = {
     execute(message, args) {
       var member = message.mentions.members.first();
       let user = message.mentions.users.first();
-      if (!message.member.roles.find(x => x.name === "Team eigenaar"))
-      if (!message.member.roles.find(x => x.name === "Co-Admin")) {
+      if (!message.member.roles.find(x => x.name === "eigenaar1"))
+      if (!message.member.roles.find(x => x.name === "bestuur")) {
         return message.channel.send("Je hebt geen permissies voor dit commando!");
       }
       if(!member)
@@ -34,7 +34,7 @@ module.exports = {
         .setTimestamp()
         .setFooter("MeldkamerBot","MELDKAMER LOGO HIER")
 
-      let modlogKanaal = message.guild.channels.get('ID VAN KANAAL VOOR MODLOGS HIER')
+      let modlogKanaal = message.guild.channels.get('786947624811888640')
                 if(modlogKanaal) {
                   modlogKanaal.send(banEmbed)
                   member.ban(reden)
