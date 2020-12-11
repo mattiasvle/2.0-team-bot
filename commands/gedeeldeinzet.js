@@ -8,11 +8,12 @@ module.exports = {
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een inzet gedeeld voor hulp!")
           .setDescription("HELP")
+          .addField("Reden:",`${reden}`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
           .setFooter("MeldkamerBot","https://i.ibb.co/VNk1Qn8/logo-IMG-20200921-WA0000.jpg")
-          .addField("Reden:",`${reden}`)
+         
 
       message.channel.send(embed);
       message.channel.send("@everyone");
