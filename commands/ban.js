@@ -32,7 +32,7 @@ module.exports = {
         .addField("Reden:",`${reden}`)
         .setThumbnail(user.displayAvatarURL)
         .setTimestamp()
-        .setFooter("MeldkamerBot","MELDKAMER LOGO HIER")
+       
 
       let modlogKanaal = message.guild.channels.get('786947624811888640')
                 if(modlogKanaal) {
