@@ -7,8 +7,8 @@ module.exports = {
     execute(message, args) {
       var member = message.mentions.members.first();
       let user = message.mentions.users.first();
-      if (!message.member.roles.find(x => x.name === "Team eigenaar"))
-      if (!message.member.roles.find(x => x.name === "Co-Admin")) {
+      if (!message.member.roles.find(x => x.name === "eigenaar1"))
+      if (!message.member.roles.find(x => x.name === "bestuur")) {
         return message.channel.send("Je hebt geen permissies voor dit commando!");
       }
       if(!member)
@@ -27,9 +27,9 @@ module.exports = {
         .addField("Reden:",`${reden}`)
         .setThumbnail(user.displayAvatarURL)
         .setTimestamp()
-        .setFooter("MeldkamerBot","MELDKAMER LOGO HIER")
+        .setFooter("MeldkamerBot","https://i.ibb.co/VNk1Qn8/logo-IMG-20200921-WA0000.jpg")
 
-        let modlogKanaal = message.guild.channels.get('ID VAN MODLOG KANAAL HIER')
+        let modlogKanaal = message.guild.channels.get('786947624811888640')
                   if(modlogKanaal) {
                       member.kick(reden)
                       modlogKanaal.send(kickEmbed);
