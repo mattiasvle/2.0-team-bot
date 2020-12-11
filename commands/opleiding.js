@@ -7,7 +7,7 @@ module.exports = {
     execute(message) {
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een opleiding gestart!")
-          .setDescription("Er is een grote team inzet gestart! Iedereen graag de benodigde voertuigen naar deze melding sturen.")
+          .setDescription("Er is een opleiding gestart!")
           .setURL("https://meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
