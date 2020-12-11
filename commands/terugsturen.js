@@ -8,12 +8,11 @@ module.exports = {
 
       const embed = new Discord.RichEmbed()
           .setTitle("Voertuigen terugsturen!")
-          .setDescription("Wil iedereen zijn ambulances (of overige voertuigen) terugsturen? Dan kan de melding afgerond worden!")
+          .setDescription("Kan iedereen zijn arrestanten en patienten afwerken? Dan kan de melding afgerond worden!")
           .setURL("https://meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
-          .setFooter("MeldkamerBot","https://i.ibb.co/5n0F3Rf/Meldkamer-Bot-01.png")
-          .setThumbnail("https://i.ibb.co/KhQX5Nh/Terugsturen-01.png")
+          .setFooter("MeldkamerBot","https://i.ibb.co/VNk1Qn8/logo-IMG-20200921-WA0000.jpg")
 
       message.channel.send(embed);
       message.channel.send("@everyone");

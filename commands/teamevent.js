@@ -12,7 +12,7 @@ module.exports = {
             .setURL("https://meldkamerspel.com")
             .setColor(0xD1132F)
             .setTimestamp()
-            .setFooter("MeldkamerBot","MELDKAMER LOGO HIER")
+            .setFooter("MeldkamerBot","https://i.ibb.co/VNk1Qn8/logo-IMG-20200921-WA0000.jpg")
 
             message.channel.send(embed);
             message.channel.send("@everyone");
