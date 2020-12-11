@@ -10,7 +10,7 @@ module.exports = {
           let array_of_arguments = rest_of_the_string.split('*'); //[title, description, link, image]
 
    
-     const embed = new Discord.RichEmbed()
+   
         
         .setTitle("Opleiding gestart")
         .setDescription("Er is zojuist een opleiding gestart!")
