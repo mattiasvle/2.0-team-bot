@@ -14,7 +14,7 @@ module.exports = {
           .setDescription("HELP")
           .addField('Opleiding:', array_of_arguments[0])
           .addField('link:', array_of_arguments[1])
-          .addField('plaatsen:', array_of_arguments[0])
+          .addField('plaatsen:', array_of_arguments[2])
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
