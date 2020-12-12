@@ -6,13 +6,13 @@ module.exports = {
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message, args) {
       let link = args.slice(0).join(" ");
-      if(!reden) {
-        link = "Er is geen reden opgegeven.";
+      if(!link) {
+        link = "Er is geen link opgegeven.";
       }
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een inzet gedeeld voor hulp!")
           .setDescription("HELP")
-          .addField("link melding:",`${link}`)
+          .addField("link:",`${link}`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
