@@ -12,8 +12,8 @@ module.exports = {
       let opleiding = args.slice(1).join(" ");
       if(!opleiding) {
         opleiding = "Er is geen opleiding opgegeven.";
-      let vrijeplaatsen = args.slice(2).join(" ");
       }
+      let vrijeplaatsen = args.slice(2).join(" ");
       if(!vrijeplaatsen) {
         vrije plaatsen = "Er is geen aantal plaatsen opgegeven.";
       }
