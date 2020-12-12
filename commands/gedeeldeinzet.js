@@ -5,14 +5,14 @@ module.exports = {
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message, args) {
-      let link melding = args.slice(0).join(" ");
+      let link = args.slice(0).join(" ");
       if(!reden) {
-        reden = "Er is geen reden opgegeven.";
+        link = "Er is geen reden opgegeven.";
       }
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een inzet gedeeld voor hulp!")
           .setDescription("HELP")
-          .addField("link melding:",`${link melding}`)
+          .addField("link melding:",`${link}`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
