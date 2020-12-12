@@ -14,7 +14,7 @@ module.exports = {
         opleiding = "Er is geen opleiding opgegeven.";
       }
       let vrijeplaatsen = args.slice(2).join(" ");
-      if(!vrijeplaatsen) {
+      if(!plaatsen) {
         plaatsen = "Er is geen aantal plaatsen opgegeven.";
       }
       const embed = new Discord.RichEmbed()
@@ -22,7 +22,7 @@ module.exports = {
           .setDescription("HELP")
           .addField("link:",`${link}`)
           .addField("opleiding:",`${opleiding}`)
-          .addField("vrije plaatsen:",`${vrijeplaatsen}`)
+          .addField("plaatsen:",`${plaatsen}`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
