@@ -10,10 +10,10 @@ module.exports = {
         link = "Er is geen link opgegeven.";
       let opleiding = args.slice(1).join(" ");
       if(!opleiding) {
-        link = "Er is geen opleiding opgegeven.";
+        opleiding = "Er is geen opleiding opgegeven.";
       let vrijeplaatsen = args.slice(2).join(" ");
       if(!vrijeplaatsen) {
-        link = "Er is geen aantal plaatsen opgegeven.";
+        vrije plaatsen = "Er is geen aantal plaatsen opgegeven.";
       }
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een inzet gedeeld voor hulp!")
