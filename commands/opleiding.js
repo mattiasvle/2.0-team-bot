@@ -1,4 +1,4 @@
-onst Discord = require('discord.js')
+const Discord = require('discord.js')
 module.exports = {
     name: 'opleiding', // The name of the command
     description: 'Verstuurd een bericht over de gestarte opleiding!', // The description of the command (for help text)
