@@ -15,7 +15,7 @@ module.exports = {
       }
       let vrijeplaatsen = args.slice(2).join(" ");
       if(!vrijeplaatsen) {
-        vrije plaatsen = "Er is geen aantal plaatsen opgegeven.";
+        plaatsen = "Er is geen aantal plaatsen opgegeven.";
       }
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een inzet gedeeld voor hulp!")
