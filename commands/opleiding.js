@@ -8,10 +8,14 @@ module.exports = {
       let link = args.slice(0).join(" ");
       if(!link) {
         link = "Er is geen link opgegeven.";
+      }
+      {
       let opleiding = args.slice(1).join(" ");
       if(!opleiding) {
         opleiding = "Er is geen opleiding opgegeven.";
       let vrijeplaatsen = args.slice(2).join(" ");
+      }
+      {
       if(!vrijeplaatsen) {
         vrije plaatsen = "Er is geen aantal plaatsen opgegeven.";
       }
