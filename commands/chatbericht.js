@@ -12,7 +12,7 @@ module.exports = {
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een (belangrijk) chatbericht geplaatst")
           .setDescription("Lees even goed dan ben je mee")
-          .addField("bericht:",`${chat`)
+          .addField("bericht:",`${chat}`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
