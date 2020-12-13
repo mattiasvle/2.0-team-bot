@@ -10,8 +10,8 @@ module.exports = {
         opleiding = "Er is geen opleiding en plaatsen opgegeven.";
       }
       const embed = new Discord.RichEmbed()
-          .setTitle("Er is een inzet gedeeld voor hulp!")
-          .setDescription("HELP")
+          .setTitle("Er is een opleiding gestart! Doe je mee?")
+          .setDescription("Leid je manschappen op zodat we de wereld kunnen redden")
           .addField("opleiding en plaatsen:",`${opleiding} plaatsen`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
