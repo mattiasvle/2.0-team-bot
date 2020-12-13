@@ -12,7 +12,7 @@ module.exports = {
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een inzet gedeeld voor hulp!")
           .setDescription("HELP")
-          .addField("opleiding en plaatsen:",`${opleiding}`)
+          .addField("opleiding en plaatsen:",`${opleiding} plaatsen`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
