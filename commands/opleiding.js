@@ -7,7 +7,7 @@ module.exports = {
     execute(message, args) {
       let opleiding = args.slice(0).join(" ");
       if(!opleiding) {
-        opleiding en duur = "Er is geen opleiding en duur opgegeven.";
+        opleiding = "Er is geen opleiding en plaatsen opgegeven.";
       }
       const embed = new Discord.RichEmbed()
           .setTitle("Er is een inzet gedeeld voor hulp!")
