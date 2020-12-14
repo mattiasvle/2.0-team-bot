@@ -1,18 +1,18 @@
 const Discord = require('discord.js')
 module.exports = {
-    name: 'gedeeldeinzet', // The name of the command
-    description: 'Verstuurd een bericht over de gestarte gedeelde inzet waarover in de chat hulp werd gevraagd!', // The description of the command (for help text)
+    name: 'teamkalender', // The name of the command
+    description: 'Verstuurd een bericht met de kalender van de dag!', // The description of the command (for help text)
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message, args) {
-      let link = args.slice(0).join(" ");
-      if(!link) {
-        link = "Er is geen link opgegeven.";
+      let kalender = args.slice(0).join(" ");
+      if(!kalender) {
+        kalender = "Er is geen kalender opgegeven.";
       }
       const embed = new Discord.RichEmbed()
-          .setTitle("Er is een inzet gedeeld voor hulp!")
-          .setDescription("HELP")
-          .addField("link:",`${link}`)
+          .setTitle("Dit is de teamkalender van vandaag!")
+          .setDescription("Zo weet je wat er vandaag komt")
+          .addField("kalender:",`${kalender}`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
@@ -20,6 +20,7 @@ module.exports = {
          
 
       message.channel.send(embed);
+      message.channel.send("@everyone");
       message.delete(1000)
     }
 };
