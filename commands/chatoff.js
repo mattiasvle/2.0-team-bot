@@ -12,7 +12,7 @@ module.exports = {
       const embed = new Discord.RichEmbed()
           .setTitle("De chatbot gaat offline")
           .setDescription("toedeloe")
-          .addField("Ik kom terug rond",`${chat} uur`)
+          .addField("Ik kom terug rond",`${chatoff} uur`)
           .setURL("https://www.meldkamerspel.com")
           .setColor(0xD1132F)
           .setTimestamp()
