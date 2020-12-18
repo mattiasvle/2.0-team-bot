@@ -7,7 +7,7 @@ module.exports = {
     execute(message, args) {
       let off = args.slice(0).join(" ");
       if(!off) {
-        offline tot = "Er is geen tijd opgegeven.";
+        off = "Er is geen tijd opgegeven.";
       }
       const embed = new Discord.RichEmbed()
           .setTitle("Slaapwel!")
