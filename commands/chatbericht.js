@@ -5,6 +5,10 @@ module.exports = {
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message, args) {
+      if (!message.member.roles.find(x => x.name === "eigenaar1"))
+      if (!message.member.roles.find(x => x.name === "bestuur")) {
+        return message.channel.send("Je hebt geen permissies voor dit commando!");
+      }
       let chat = args.slice(0).join(" ");
       if(!chat) {
         chat = "Er is geen chatbericht opgegeven.";
