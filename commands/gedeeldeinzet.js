@@ -5,6 +5,10 @@ module.exports = {
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
     execute(message, args) {
+      var member = message.mentions.members.first();
+      let user = message.mentions.users.first();
+      if (!message.member.roles.find(x => x.name === "eigenaar1"))
+      if (!message.member.roles.find(x => x.name === "bestuur")) {
       let link = args.slice(0).join(" ");
       if(!link) {
         link = "Er is geen link opgegeven.";
