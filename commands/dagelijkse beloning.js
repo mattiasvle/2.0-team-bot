@@ -4,7 +4,7 @@ module.exports = {
     description: 'Verstuurd een herinnering voor het ophalen van de dagelijkse beloning!', // The description of the command (for help text)
     args: false, // Specified that this command doesn't need any data other than the command
     usage: '', // Help text to explain how to use the command (if it had any arguments)
-    execute(message) {
+    execute(message, args) {
       if (!message.member.roles.find(x => x.name === "eigenaar1"))
       if (!message.member.roles.find(x => x.name === "bestuur")) {
       const embed = new Discord.RichEmbed()
